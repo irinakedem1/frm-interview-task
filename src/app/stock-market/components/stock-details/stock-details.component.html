@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-1">Symbol</div>
+    <div class="col-2">Name</div>
+    <div class="col-2">Base price</div>
+    <div class="col-1">Price</div>
+    <div class="col-1">Bid Size</div>
+    <div class="col-1">Bid Price</div>
+    <div class="col-1">Ask size</div>
+    <div class="col-1">Ask price</div>
+  </div>
+  <div class="row" *ngFor="let stock of stocks$ | async">
+    <div class="col-1"><a href="#" (click)="removeStock(stock)">X</a></div>
+    <div class="col-1">{{stock.Symbol}}</div>
+    <div class="col-2">{{stock.Name}}</div>
+    <div class="col-2">{{stock.BasePrice}}</div>
+    <div class="col-1"></div>
+    <div class="col-1">{{stock.BidSize}}</div>
+    <div class="col-1">{{stock.Bid}}</div>
+    <div class="col-1">{{stock.AskSize}}</div>
+    <div class="col-1">{{stock.Ask}}</div>
+  </div>
+</div>
+

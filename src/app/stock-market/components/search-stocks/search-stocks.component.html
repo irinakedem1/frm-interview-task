@@ -1,0 +1,8 @@
+Search <input [formControl]="queryControl">
+<div class="product-item row" *ngFor="let stock of searchResults$ | async">
+  <a class="stock" href="#" (click)="addStock(stock)">
+    <div> {{stock.Symbol}} - {{stock.Name}}</div>
+  </a>
+</div>
+
+
