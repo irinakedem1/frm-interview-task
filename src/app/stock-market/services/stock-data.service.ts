@@ -33,7 +33,8 @@ export class StockDataService {
   removeStock(stock: Stock): void {
     const ind = this.stocks.findIndex(s => s.Symbol === stock.Symbol);
     if (ind !== -1) {
-      this.updateStocks(this.stocks.splice(ind, 1));
+      this.stocks.splice(ind, 1);
+      this.updateStocks(this.stocks);
     }
   }
 
